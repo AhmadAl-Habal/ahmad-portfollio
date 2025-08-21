@@ -8,6 +8,8 @@ import { Menu, X, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { ModeToggle } from "@/components/mode-toggle"
+import { aboutMeInfo } from "../data/info"
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -62,15 +64,15 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full overflow-hidden">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2024-01-13%2011.18.52.jpg-N2gGSRKoNG1rLVJ2VoyYRnF6QkKsm9.jpeg"
-                alt="Ahmad Al-Shahal"
+                src={aboutMeInfo.profileImg}
+                alt="Ahmad Al-Habal"
                 width={32}
                 height={32}
                 className="object-cover"
               />
             </div>
             <Link href="/" className="text-lg font-bold tracking-tighter hover:text-primary transition-colors">
-              Ahmad Al-Shahal
+              {aboutMeInfo.name}
             </Link>
           </div>
 

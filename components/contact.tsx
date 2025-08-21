@@ -1,56 +1,68 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, Send, MapPin, MessageSquare, Github, Linkedin, Loader2 } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
-import { sendContactEmail } from "@/lib/actions"
-import { useToast } from "@/hooks/use-toast"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Mail,
+  Phone,
+  Send,
+  MapPin,
+  MessageSquare,
+  Github,
+  Linkedin,
+  Loader2,
+} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { sendContactEmail } from "@/lib/actions";
+import { useToast } from "@/hooks/use-toast";
+import { contactMeInfo } from "../data/info";
 
 export default function Contact() {
-  const { toast } = useToast()
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-  })
-  const [errors, setErrors] = useState<Record<string, string[]>>({})
+  });
+  const [errors, setErrors] = useState<Record<string, string[]>>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => {
-        const newErrors = { ...prev }
-        delete newErrors[name]
-        return newErrors
-      })
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
     }
-  }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setErrors({})
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrors({});
 
     try {
-      const result = await sendContactEmail(formData)
+      const result = await sendContactEmail(formData);
 
       if (result.success) {
         toast({
           title: "Message Sent",
           description: "Thank you for your message. I'll get back to you soon!",
-        })
+        });
 
         // Reset form
         setFormData({
@@ -58,16 +70,16 @@ export default function Contact() {
           email: "",
           subject: "",
           message: "",
-        })
+        });
       } else {
         toast({
           title: "Error",
           description: result.message,
           variant: "destructive",
-        })
+        });
 
         if (result.errors) {
-          setErrors(result.errors)
+          setErrors(result.errors);
         }
       }
     } catch (error) {
@@ -75,11 +87,11 @@ export default function Contact() {
         title: "Error",
         description: "Something went wrong. Please try again later.",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <section id="contact" className="py-24">
@@ -93,8 +105,9 @@ export default function Contact() {
         <h3 className="text-sm font-medium text-primary mb-2">GET IN TOUCH</h3>
         <h2 className="text-3xl font-bold">Contact Me</h2>
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel
-          free to reach out through any of the methods below.
+          I'm always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision. Feel free to reach out
+          through any of the methods below.
         </p>
       </motion.div>
 
@@ -117,10 +130,10 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <Link
-                      href="mailto:ahmad.alshahal2@gmail.com"
+                      href={`mailto:${contactMeInfo.email}`}
                       className="font-medium hover:text-primary transition-colors"
                     >
-                      ahmad.alshahal2@gmail.com
+                      {contactMeInfo.email}
                     </Link>
                   </div>
                 </div>
@@ -131,8 +144,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <Link href="tel:+963951737433" className="font-medium hover:text-primary transition-colors">
-                      (+963) 951737433
+                    <Link
+                      href={`tel:+963${contactMeInfo.phone}`}
+                      className="font-medium hover:text-primary transition-colors"
+                    >
+                      (+963) {contactMeInfo.phone}
                     </Link>
                   </div>
                 </div>
@@ -144,7 +160,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">WhatsApp</p>
                     <Link
-                      href="https://wa.me/963951737433"
+                      href={contactMeInfo.whatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-medium hover:text-primary transition-colors"
@@ -155,13 +171,13 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                     <MessageSquare className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Telegram</p>
                     <Link
-                      href="https://t.me/963951737433"
+                      href={contactMeInfo.telegram}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-medium hover:text-primary transition-colors"
@@ -177,14 +193,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">Tripoli, Lebanon / Damascus, Syria</p>
+                    <p className="font-medium">{contactMeInfo.address}</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex gap-3 mt-8">
                 <Link
-                  href="https://www.linkedin.com/in/ahmad-shahal"
+                  href={contactMeInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -192,7 +208,7 @@ export default function Contact() {
                   <Linkedin className="h-5 w-5 text-primary" />
                 </Link>
                 <Link
-                  href="https://github.com/ahmadshahal"
+                  href={contactMeInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -200,7 +216,7 @@ export default function Contact() {
                   <Github className="h-5 w-5 text-primary" />
                 </Link>
                 <Link
-                  href="mailto:ahmad.alshahal2@gmail.com"
+                  href={`mailto:${contactMeInfo.email}`}
                   className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
                 >
                   <Mail className="h-5 w-5 text-primary" />
@@ -234,7 +250,9 @@ export default function Contact() {
                       placeholder="Your name"
                       className={errors.name ? "border-red-500" : ""}
                     />
-                    {errors.name && <p className="text-xs text-red-500">{errors.name[0]}</p>}
+                    {errors.name && (
+                      <p className="text-xs text-red-500">{errors.name[0]}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
@@ -249,7 +267,9 @@ export default function Contact() {
                       placeholder="Your email"
                       className={errors.email ? "border-red-500" : ""}
                     />
-                    {errors.email && <p className="text-xs text-red-500">{errors.email[0]}</p>}
+                    {errors.email && (
+                      <p className="text-xs text-red-500">{errors.email[0]}</p>
+                    )}
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -264,7 +284,9 @@ export default function Contact() {
                     placeholder="Subject"
                     className={errors.subject ? "border-red-500" : ""}
                   />
-                  {errors.subject && <p className="text-xs text-red-500">{errors.subject[0]}</p>}
+                  {errors.subject && (
+                    <p className="text-xs text-red-500">{errors.subject[0]}</p>
+                  )}
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
@@ -279,9 +301,15 @@ export default function Contact() {
                     rows={5}
                     className={errors.message ? "border-red-500" : ""}
                   />
-                  {errors.message && <p className="text-xs text-red-500">{errors.message[0]}</p>}
+                  {errors.message && (
+                    <p className="text-xs text-red-500">{errors.message[0]}</p>
+                  )}
                 </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? (
                     <>
                       <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -300,5 +328,5 @@ export default function Contact() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

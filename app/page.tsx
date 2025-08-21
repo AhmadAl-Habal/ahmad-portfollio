@@ -20,9 +20,9 @@ export default function Home() {
         <Skills />
         <Projects />
         <Education />
-        <Volunteering />
-        <CommunicationSkills />
-        <Achievements />
+        {/* <Volunteering /> */}
+        {/* <CommunicationSkills /> */}
+        {/* <Achievements /> */}
         <Contact />
       </div>
       <Footer />

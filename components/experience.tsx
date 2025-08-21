@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { experiencesInfo } from "@/data/info";
 
 export default function Experience() {
   const experiences = [
@@ -42,10 +43,10 @@ export default function Experience() {
         "Adopted Jetpack Compose to modernize UI development, leading to a smoother user experience and more efficient development workflows.",
         "Set up CI/CD pipelines, automating builds and deployments to streamline the development cycle and speed up app delivery.",
         "Continuously explored and implemented new technologies and frameworks across both Android and Flutter projects to stay aligned with modern mobile development practices.",
-        "Participated in the hiring process by interviewing candidates and designing technical assessments to evaluate mobile development skills."
+        "Participated in the hiring process by interviewing candidates and designing technical assessments to evaluate mobile development skills.",
       ],
     },
-  ]
+  ];
 
   return (
     <section id="experience" className="py-24">
@@ -62,72 +63,66 @@ export default function Experience() {
 
       <div className="relative">
         {/* Timeline line */}
-        <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
+        <div className="absolute left-0 md:left-[13vw] transform md:-translate-x-1/2 h-full w-0.5 bg-primary/20"></div>
 
         <div className="space-y-12">
-          {experiences.map((exp, index) => (
+          {experiencesInfo.map((exp, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+              className={`relative flex flex-col md:flex-row-reverse justify-center`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background dark:border-background"></div>
+              <div className="absolute left-0 md:left-[13vw] transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background dark:border-background"></div>
 
               {/* Content */}
-              <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pl-12" : "md:pr-12"} pl-8 md:pl-0`}>
+              <div className="md:w-3/4 md:pl-12 pl-8">
                 <Card>
                   <CardContent className="p-6">
                     <div className="mb-4">
-                      <Badge variant="outline" className="mb-2 bg-primary/10 text-primary border-primary/20">
-                        {exp.period}
-                      </Badge>
-                      <h3 className="text-xl font-bold">{exp.title}</h3>
-                      {exp.company === "Solunyx Sdn. Bhd." ? (
-                        <p className="text-primary font-medium">
-                          <Link
-                            href="https://solunyx.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                          >
-                            Solunyx Sdn. Bhd.
-                          </Link>
-                        </p>
-                      ) : exp.company === "PLAN A Agency" ? (
-                        <p className="text-primary font-medium">
-                          <Link
-                            href="https://plana.ae"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                          >
-                            PLAN A Agency
-                          </Link>
-                        </p>
-                      ) : (
-                        <p className="text-primary font-medium">OnMyWay</p>
+                      {exp.date && (
+                        <Badge
+                          variant="outline"
+                          className="mb-2 bg-primary/10 text-primary border-primary/20"
+                        >
+                          {exp.date}
+                        </Badge>
                       )}
-                      <p className="text-sm text-muted-foreground">{exp.location}</p>
+
+                      {exp.role && (
+                        <h3 className="text-xl font-bold">{exp.role}</h3>
+                      )}
+
+                      {exp.company && (
+                        <p className="text-primary font-medium">
+                          {exp.company}
+                        </p>
+                      )}
+
+                      {exp.location && (
+                        <p className="text-sm text-muted-foreground">
+                          {exp.location}
+                        </p>
+                      )}
                     </div>
-                    <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                      {exp.description.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
+
+                    {exp.responsibilties?.length > 0 && (
+                      <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                        {exp.responsibilties.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
                   </CardContent>
                 </Card>
               </div>
-
-              {/* Empty div for layout */}
-              <div className="md:w-1/2"></div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
