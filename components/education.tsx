@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { GraduationCap } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { GraduationCap } from "lucide-react";
+import { educationInfo } from "../data/info";
 
 export default function Education() {
   return (
@@ -35,31 +36,30 @@ export default function Education() {
 
               <div className="flex-1">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold">Bachelor's Degree in Software Engineering</h3>
-                    <p className="text-primary font-medium">Damascus University</p>
+                  <div className="">
+                    <h3 className="text-xl font-bold pt-2">
+                      {educationInfo.name}
+                    </h3>
+                    <p className="text-primary font-medium">
+                      {educationInfo.collage}
+                    </p>
                   </div>
-                  <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
-                    10/2019 - 09/2024
+                  <Badge
+                    variant="outline"
+                    className="bg-primary/10 text-primary border-primary/20"
+                  >
+                    {educationInfo.date}
                   </Badge>
                 </div>
-
-                <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
-                  <li>
-                    My studies provided me with a strong foundation in software engineering principles, where I
-                    developed a deep understanding of software design, algorithms, and data structures that I apply
-                    daily in my work.
-                  </li>
-                  <li>
-                    I gained practical experience through hands-on projects using C, C++, and Java, which helped me
-                    build the problem-solving mindset that drives my approach to mobile development today.
-                  </li>
-                </ul>
+                <p>{educationInfo.desc}</p>
+                {/* <ul className=" pl-5 space-y-2 text-muted-foreground">
+                  <li></li>
+                </ul> */}
               </div>
             </div>
           </CardContent>
         </Card>
       </motion.div>
     </section>
-  )
+  );
 }

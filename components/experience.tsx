@@ -7,47 +7,6 @@ import Link from "next/link";
 import { experiencesInfo } from "@/data/info";
 
 export default function Experience() {
-  const experiences = [
-    {
-      title: "Android Developer",
-      company: "PLAN A Agency",
-      period: "12/2024 - Present",
-      location: "Damascus, Syria",
-      description: [
-        "I develop and maintain key app features, focusing on creating intuitive interfaces that enhance user experience while meeting business objectives.",
-        "I actively participate in collaborative code reviews, embracing feedback to refine my skills and contribute to our team's high quality standards.",
-      ],
-    },
-    {
-      title: "Mid-Level Android Developer",
-      company: "OnMyWay",
-      period: "05/2024 - 12/2024",
-      location: "Remotely",
-      description: [
-        "I played a key role in developing new features that improved both functionality and user satisfaction, always keeping business goals at the forefront.",
-        "I built comprehensive unit tests that significantly reduced production bugs and ensured reliable app performance across updates.",
-        "I helped implement CI/CD pipelines that transformed our release process, making it more efficient and allowing us to deliver updates more frequently and reliably.",
-        "Engaged in code reviews by senior developers, incorporating their feedback to continually improve my skills and contribute to a high standard of code across the team.",
-        "Provided guidance and code reviews for junior developers, ensuring adherence to best practices and maintaining high code quality standards across the team.",
-      ],
-    },
-    {
-      title: "Mobile Developer",
-      company: "Solunyx Sdn. Bhd.",
-      period: "07/2022 - 12/2024",
-      location: "Damascus, Syria",
-      description: [
-        "Developed and delivered multiple Android applications, including SmartDeen Pro and Tayar Tablet, ensuring they met client expectations with clean design and solid performance.",
-        "Delivered Nous, a Flutter-based cross-platform app, fully managing its development from the ground up, including both Android and iOS support.",
-        "Refactored and modernized legacy Android codebases, improving maintainability and laying the groundwork for long-term scalability.",
-        "Adopted Jetpack Compose to modernize UI development, leading to a smoother user experience and more efficient development workflows.",
-        "Set up CI/CD pipelines, automating builds and deployments to streamline the development cycle and speed up app delivery.",
-        "Continuously explored and implemented new technologies and frameworks across both Android and Flutter projects to stay aligned with modern mobile development practices.",
-        "Participated in the hiring process by interviewing candidates and designing technical assessments to evaluate mobile development skills.",
-      ],
-    },
-  ];
-
   return (
     <section id="experience" className="py-24">
       <motion.div

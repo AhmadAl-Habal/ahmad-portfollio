@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Cpu, Layers } from "lucide-react";
 import { skillCategoriesInfo } from "../data/info";
+import { Badge } from "@/components/ui/badge";
 export default function Skills() {
   return (
     <section id="skills" className="py-24">
@@ -37,12 +38,13 @@ export default function Skills() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, i) => (
-                    <span
+                      <Badge
                       key={i}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      variant="outline"
+                      className="bg-primary/10 text-primary border-primary/20"
                     >
                       {skill}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
               </CardContent>
