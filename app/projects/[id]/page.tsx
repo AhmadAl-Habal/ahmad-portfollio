@@ -101,19 +101,23 @@ export default function ProjectDetail() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Challenges</h2>
-            <div className="text-muted-foreground whitespace-pre-line">
-              {project.challenges}
+          {project.challenges && (
+            <div>
+              <h2 className="text-2xl font-bold mb-3">Challenges</h2>
+              <div className="text-muted-foreground whitespace-pre-line">
+                {project.challenges}
+              </div>
             </div>
-          </div>
+          )}
 
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Outcomes</h2>
-            <div className="text-muted-foreground whitespace-pre-line">
-              {project.outcomes}
+          {project.outcomes && (
+            <div>
+              <h2 className="text-2xl font-bold mb-3">Outcomes</h2>
+              <div className="text-muted-foreground whitespace-pre-line">
+                {project.outcomes}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </motion.div>
     </div>

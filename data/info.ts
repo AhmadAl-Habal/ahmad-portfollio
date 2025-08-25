@@ -122,13 +122,11 @@ export const skillCategoriesInfo = [
       "Load Testing",
       "Stress Testing",
       "Usability Testing",
-      "Accessibility Testing",
-      "Security Testing",
-      //   "Unit Testing",
+  
       "Test Planning",
       "Test Case Design",
       "Test Scripts",
-      "Bug Reporting",
+      
       "Testing Documentation",
 
       // Automation Frameworks & Tools
@@ -149,7 +147,7 @@ export const skillCategoriesInfo = [
       "Jira",
       "ClickUp",
       "Qase",
-      "TestRail",
+     
       //   "Zephyr",
 
       // Version Control & CI/CD
@@ -161,11 +159,11 @@ export const skillCategoriesInfo = [
       //   "Java",
 
       // Methodologies & Best Practices
-      "Agile Testing",
+     
       //   "Scrum",
       //   "Kanban",
       //   "Shift-Left Testing",
-      "Risk-Based Testing",
+      
       "Exploratory Testing",
       "Behavior Driven Development (BDD)",
       "Test-Driven Development (TDD)",
@@ -410,18 +408,16 @@ export const projectsInfo = [
     id: "product-owner-stuff",
     title: "Systems analysis and mangements",
     description:
-      "A collection of QA samples showcasing manual and automated testing practices using modern tools.",
+      "A collection of Systems Analysis & Management samples using modern tools.",
     technologies: [
-      "Playwright",
-      "Cypress",
-      "JMeter",
-      "Postman",
-      "Qase",
-      "Testim",
       "Jira",
+      "Canva",
       "Clickup",
-      "Linear",
-      "TypeScript",
+      "Slack",
+      "Miro",
+      "Figma",
+      "Notion",
+      "Vecel Analytics",
     ],
     image: "/images/product-owner/welcome.png",
   },
@@ -429,19 +425,8 @@ export const projectsInfo = [
     id: "portfolio-template",
     title: "Portfolio Template",
     description:
-      "A collection of QA samples showcasing manual and automated testing practices using modern tools.",
-    technologies: [
-      "Playwright",
-      "Cypress",
-      "JMeter",
-      "Postman",
-      "Qase",
-      "Testim",
-      "Jira",
-      "Clickup",
-      "Linear",
-      "TypeScript",
-    ],
+      "A Portfolio Template built with Next.js to showcase your projects, skills, and experience in a clean and responsive design.",
+    technologies: ["Next", "React", "Tailwind", "Lucid", "Github", "Vercel"],
     image: "/images/portfolio-template/welcome.png",
   },
 ];
@@ -474,9 +459,7 @@ export const projectsDetails = {
       "/images/jobby-finder/4.png",
       "/images/jobby-finder/5.png",
     ],
-    challenges: `
-      
-      `,
+    challenges: ``,
     outcomes: ``,
   },
   laploby: {
@@ -564,12 +547,8 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "/images/dashstack/5.png",
       "/images/dashstack/6.png",
     ],
-    challenges: `
-       
-      `,
-    outcomes: `
-       
-      `,
+    challenges: ``,
+    outcomes: ``,
   },
   "qa-stuff": {
     title: "Quality Assurance Samples",
@@ -602,29 +581,23 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       // "/images/qa-samples/Playwright genophore test.mp4",
       // "/images/qa-samples/Qase project.mp4",
     ],
-    challenges: `
-        
-      `,
-    outcomes: `
-      
-      `,
+    challenges: ``,
+    outcomes: ``,
   },
   "product-owner-stuff": {
     title: "Systems analysis and mangements",
     description: `
-   QA Samples is a dedicated project that highlights different aspects of Quality Assurance work through practical examples. It includes full test plans for web applications created with tools like Qase, along with detailed test cases, test scripts, and execution flows. The project also showcases automation testing examples with Playwright and Cypress, supported by sample code and real execution runs. Additionally, it contains performance testing scenarios with JMeter, illustrating how to measure and analyze system reliability under load. This collection serves as a portfolio of QA practices, combining manual and automated testing approaches to demonstrate a complete quality process.
+  A collection of Systems analysis and mangements samples highlighting systems analysis and management practices, including workflow diagrams, process mappings, and project planning insights. Demonstrates manual and automated testing strategies with modern tools and methodologies.
       `,
     technologies: [
-      "Playwright",
-      "Cypress",
-      "JMeter",
-      "Postman",
-      "Qase",
-      "Testim",
       "Jira",
+      "Canva",
       "Clickup",
-      "Linear",
-      "TypeScript",
+      "Slack",
+      "Miro",
+      "Figma",
+      "Notion",
+      "Vecel Analytics",
     ],
     images: [
       "/images/product-owner/1.png",
@@ -633,40 +606,18 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "/images/product-owner/4.png",
       "/images/product-owner/5.png",
     ],
-    challenges: `
-        
-      `,
-    outcomes: `
-      
-      `,
+    challenges: ``,
+    outcomes: ``,
   },
   "portfolio-template": {
     title: "Portfolio Template",
     description: `
-   QA Samples is a dedicated project that highlights different aspects of Quality Assurance work through practical examples. It includes full test plans for web applications created with tools like Qase, along with detailed test cases, test scripts, and execution flows. The project also showcases automation testing examples with Playwright and Cypress, supported by sample code and real execution runs. Additionally, it contains performance testing scenarios with JMeter, illustrating how to measure and analyze system reliability under load. This collection serves as a portfolio of QA practices, combining manual and automated testing approaches to demonstrate a complete quality process.
+   This Portfolio Template uses Next.js for fast, SEO-friendly pages and Tailwind CSS for modern, responsive design. It includes sections for projects, about me, and contact, with reusable React components. The template is fully customizable, allowing you to update colors, images, and content easily. It’s perfect for developers and designers who want a professional online presence. You can deploy it instantly on platforms like Vercel.
       `,
-    technologies: [
-      "Playwright",
-      "Cypress",
-      "JMeter",
-      "Postman",
-      "Qase",
-      "Testim",
-      "Jira",
-      "Clickup",
-      "Linear",
-      "TypeScript",
-    ],
-    images: [
-      "/images/portfolio-template/1.png",
-
-    ],
-    challenges: `
-        
-      `,
-    outcomes: `
-      
-      `,
+    technologies: ["Next", "React", "Tailwind", "Lucid", "Github", "Vercel"],
+    images: ["/images/portfolio-template/1.png"],
+    challenges: ``,
+    outcomes: ``,
   },
 };
 

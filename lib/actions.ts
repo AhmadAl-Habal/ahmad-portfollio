@@ -2,6 +2,7 @@
 
 import { z } from "zod"
 import { Resend } from 'resend';
+import { aboutMeInfo } from "../data/info";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -30,7 +31,7 @@ export async function sendContactEmail(formData: FormData) {
 
     const { data, error } = await resend.emails.send({
       from: "portfolio@resend.dev",
-      to: "ahmad.alshahal2@gmail.com",
+      to: aboutMeInfo.email,
       subject: `Portfolio Contact: ${formData.subject}`,
       text: `
         Name: ${formData.name}

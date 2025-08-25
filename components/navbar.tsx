@@ -133,7 +133,7 @@ export default function Navbar() {
               </a>
             ))}
             <div className="flex flex-col gap-2 p-3">
-              <a href="/resume.pdf" download="ahmad-alshahal-resume.pdf">
+              <a href="/resume.pdf" download={`${aboutMeInfo.name} resume.pdf`}>
                 <Button variant="outline" size="sm" className="flex items-center justify-center gap-1">
                   Resume <Download className="h-3 w-3" />
                 </Button>
