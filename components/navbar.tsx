@@ -1,50 +1,53 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Download } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { ModeToggle } from "@/components/mode-toggle"
-import { aboutMeInfo } from "../data/info"
-
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Download } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { ModeToggle } from "@/components/mode-toggle";
+import { aboutMeInfo } from "../data/info";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setScrolled(true)
+        setScrolled(true);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault()
-    const section = document.getElementById(sectionId)
+  const handleScrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
     if (section) {
       // Close mobile menu if open
-      if (isOpen) setIsOpen(false)
+      if (isOpen) setIsOpen(false);
 
       // Calculate offset (accounting for fixed header)
-      const offset = 80 // Adjust this value based on your header height
-      const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - offset
+      const offset = 80; // Adjust this value based on your header height
+      const sectionTop =
+        section.getBoundingClientRect().top + window.pageYOffset - offset;
 
       window.scrollTo({
         top: sectionTop,
         behavior: "smooth",
-      })
+      });
     }
-  }
+  };
 
   const navLinks = [
     { name: "About", href: "#about", id: "about" },
@@ -52,12 +55,15 @@ export default function Navbar() {
     { name: "Projects", href: "#projects", id: "projects" },
     { name: "Skills", href: "#skills", id: "skills" },
     { name: "Contact", href: "#contact", id: "contact" },
-  ]
+  ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"
-        }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/80 backdrop-blur-md border-b"
+          : "bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -71,7 +77,10 @@ export default function Navbar() {
                 className="object-cover"
               />
             </div>
-            <Link href="/" className="text-lg font-bold tracking-tighter hover:text-primary transition-colors">
+            <Link
+              href="/"
+              className="text-lg font-bold tracking-tighter hover:text-primary transition-colors"
+            >
               {aboutMeInfo.name}
             </Link>
           </div>
@@ -95,13 +104,21 @@ export default function Navbar() {
               <ModeToggle />
               <div className="relative group">
                 <a href="/resume.pdf" download="ahmad-alshahal-resume.pdf">
-                  <Button variant="outline" size="sm" className="flex items-center gap-1">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-1"
+                  >
                     Resume <Download className="h-3 w-3" />
                   </Button>
                 </a>
               </div>
               <Button size="sm" asChild>
-                <a href="#contact" onClick={(e) => handleScrollToSection(e, "contact")}>
+                <a
+                  href="#contact"
+                  onClick={(e) => handleScrollToSection(e, "contact")}
+                  className="hover:text-primary"
+                >
                   Get in Touch
                 </a>
               </Button>
@@ -111,8 +128,17 @@ export default function Navbar() {
           {/* Mobile Navigation Button */}
           <div className="flex md:hidden items-center gap-2">
             <ModeToggle />
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -134,12 +160,20 @@ export default function Navbar() {
             ))}
             <div className="flex flex-col gap-2 p-3">
               <a href="/resume.pdf" download={`${aboutMeInfo.name} resume.pdf`}>
-                <Button variant="outline" size="sm" className="flex items-center justify-center gap-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center justify-center gap-1"
+                >
                   Resume <Download className="h-3 w-3" />
                 </Button>
               </a>
               <Button size="sm" asChild>
-                <a href="#contact" onClick={(e) => handleScrollToSection(e, "contact")}>
+                <a
+                  className="text-black hover:text-primary "
+                  href="#contact"
+                  onClick={(e) => handleScrollToSection(e, "contact")}
+                >
                   Get in Touch
                 </a>
               </Button>
@@ -148,5 +182,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

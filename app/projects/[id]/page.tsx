@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -9,8 +9,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { projectsDetails } from "../../../data/info";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 
 export default function ProjectDetail() {
+  const [sliderRef] = useKeenSlider({
+    slides: { perView: 7, spacing: 8 },
+  });
   const { id } = useParams();
   const projectId = Array.isArray(id) ? id[0] : id;
   const project = projectsDetails[projectId as keyof typeof projectsDetails];
@@ -45,7 +50,19 @@ export default function ProjectDetail() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+        <div className="flex items-center mb-5">
+          <h1 className="text-4xl font-bold mr-5">{project.title}</h1>
+          {project.deployment && (
+            <a
+              href={project.deployment}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-3 hover:text-primary"
+              target="_blank"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View Live
+            </a>
+          )}
+        </div>
 
         <div className="flex flex-wrap gap-2 mb-8">
           {project.technologies.map((tech, i) => (
@@ -68,26 +85,27 @@ export default function ProjectDetail() {
                 className="object-contain bg-black/5 dark:bg-white/5"
               />
             </div>
-            <div className="flex gap-2 overflow-x-auto pb-2">
-              {project.images.map((image, i) => (
-                <button
-                  key={i}
-                  onClick={() => setSelectedImage(i)}
-                  className={`relative h-20 w-32 rounded-md overflow-hidden border-2 transition-all ${
-                    selectedImage === i
-                      ? "border-primary"
-                      : "border-transparent"
-                  }`}
-                >
-                  <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`${project.title} thumbnail ${i + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+            <div ref={sliderRef} className="keen-slider">
+        {project.images.map((image, i) => (
+          <div key={i} className="keen-slider__slide !w-auto">
+            <button
+              onClick={() => setSelectedImage(i)}
+              className={`relative h-20 w-32 rounded-md overflow-hidden border-2 transition-all ${
+                selectedImage === i
+                  ? "border-primary"
+                  : "border-transparent"
+              }`}
+            >
+              <Image
+                src={image || "/placeholder.svg"}
+                alt={`${project.title} thumbnail ${i + 1}`}
+                fill
+                className="object-cover"
+              />
+            </button>
+          </div>
+        ))}
+      </div>
           </div>
 
           <div className="space-y-6">

@@ -75,7 +75,7 @@ export default function About() {
 
           <div className="flex flex-wrap gap-4">
             <Button asChild>
-              <Link href="#contact" className="flex items-center gap-1">
+              <Link href="#contact" className="text-black hover:text-primary flex items-center gap-1">
                 Contact Me <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

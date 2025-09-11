@@ -31,10 +31,10 @@ export default function Skills() {
             <Card className="h-full">
               <CardContent className="p-6 h-full">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    {/* {category.icon} */}
-                  </div>
-                  <h3 className="text-xl font-bold">{category.title}</h3>
+                  {/* <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    {category.icon}
+                  </div> */}
+                  <h3 className="text-xl font-bold mb-3">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, i) => (

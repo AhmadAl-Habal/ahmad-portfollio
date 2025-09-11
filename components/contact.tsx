@@ -248,7 +248,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className={errors.name ? "border-red-500" : ""}
+                      className={`outline-none ${errors.name ? "border-red-500" : ""}`}
                     />
                     {errors.name && (
                       <p className="text-xs text-red-500">{errors.name[0]}</p>
@@ -307,7 +307,7 @@ export default function Contact() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full hover:text-primary hover:bg-black"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
