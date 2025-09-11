@@ -1,239 +1,141 @@
 export const aboutMeInfo = {
-  name: "Ahmad Al-Habal",
-  role: "QA Specalist | Web Engineer | Product Owner",
-  desc: `      Hello! I'm Ahmad, a passionate QA Specialist with over 4 years of
-            hands-on experience in ensuring quality across both web and mobile
-            applications. My background goes beyond traditional testing—I bring
-            a holistic understanding of the entire product lifecycle, from
-            frontend and backend development to system architecture and
-            deployment. What sets me apart is my ability to take full ownership
-            of complex projects: designing testing structures, building
-            workflows, analyzing requirements, and collaborating with teams to
-            deliver reliable, scalable, and user-centered solutions. I don’t
-            just test for bugs; I ensure that every feature aligns with business
-            goals, technical standards, and the best user experience possible`,
-  phone: "930858352",
-  email: "ahmadhabal9@gmail.com",
-  address: "Rukin-Aldin, Damascus, Syria",
-  linkedin: "https://www.linkedin.com/in/ahmad-al-habal-75b16621b/",
-  github: "https://github.com/AhmadAl-Habal/",
+  name: "Lorem ipsum dolor sit amet",
+  role: "Lorem ipsum  |  dolor sit amet",
+  desc: `   Lorem ipsum dolor sit amet`,
+  phone: "Lorem ipsum dolor sit amet",
+  email: "Lorem ipsum dolor sit amet@gmail.com",
+  address: "Lorem ipsum dolor sit amet",
+  linkedin: "https://www.linkedin.com/in/Lorem ipsum dolor sit amet",
+  github: "https://github.com/Lorem ipsum dolor sit amet",
   profileImg: "/images/profile.jpg",
   backgroundExp: [
     {
       icon: `CircleCheckBig`,
-      backgroundTitle: "Quality Assurance",
-      backgroundDesc: `While my first steps in tech were with web development, my professional path really took shape when I moved into Quality Assurance. I started out with a focus on basic testing tasks, but as I worked on more projects, I continuously built up my skills and applied them across different types of applications and domains.
-
-  Over time, I expanded my experience from manual testing into broader areas—covering functional, regression, integration, and performance testing. Along the way, I also developed leadership and decision-making skills, especially in situations where ensuring quality required carefully weighing options to balance timelines, features, and overall project goals.
-
-  By combining structured QA practices with practical project experience, I was able to help deliver products that were not only reliable but also aligned with long-term maintainability and quality standards.`,
+      backgroundTitle: "Lorem ipsum dolor sit amet",
+      backgroundDesc: `Lorem ipsum dolor sit amet`,
     },
     {
       icon: `Globe`,
-      backgroundTitle: "Web Development",
-      backgroundDesc: `My journey in tech actually started with web development. I was curious about how websites and apps were built, so I began with frontend work—building simple pages and experimenting with design and interactivity. When I moved into Quality Assurance and while testing different applications, I naturally gain deeper understanding of how they were built and connected. That hands-on exposure pushed me to grow as a developer in parallel with my QA work.
-
-  I began applying what I learned by building small web apps and online stores—mainly using React on the frontend and experimenting with Node.js and Express on the backend. Working from both sides gave me a clearer picture of how applications function end to end, and it allowed me to apply QA principles directly into my development process. This combination not only improved my dev skills but also helped me deliver more reliable, higher-quality projects`,
+      backgroundTitle: "Lorem ipsum dolor sit amet",
+      backgroundDesc: `Lorem ipsum dolor sit amet`,
     },
     {
       icon: `Layers`,
-      backgroundTitle: "Project Ownership",
-      backgroundDesc: `In recent years, I’ve developed my skills further to take on ownership of small to mid-sized projects from start to finish. Thanks to my combined background in QA and development, I understand how different parts of a project connect together—both technically and from a business perspective.
-
-  This allowed me to bridge the gap between clients, teams, and project goals. By applying the right methodologies, such as Agile, I could align expectations, ensure smooth collaboration, and deliver the best possible experience. My focus on quality and development principles also played a big role in making sure every project I owned was not only delivered on time but also scalable, maintainable, and valuable to the client`,
+      backgroundTitle: "Lorem ipsum dolor sit amet",
+      backgroundDesc: `Lorem ipsum dolor sit amet`,
     },
   ],
 };
 export const experiencesInfo = [
   {
-    date: "2021 JAN - 2023 DEC",
-    role: "Quality Assurance Specialist , QA Manager",
-    company: "Genophore (Life Sciences Research and Molecular Design)",
-    location: "Remote, America",
+    date: "2099 JAN - 2099 JAN",
+    role: "Lorem ipsum dolor sit amet",
+    company: "Lorem ipsum dolor sit amet",
+    location: "Lorem ipsum dolor sit amet",
     responsibilties: [
-      "Managed all Quality Assurance tasks for product releases independently, ensuring high quality and timely delivery.",
-      "Trained and guided new testers on work processes and platform features.",
-      "Collaborated with product owners and customers to discuss and define new features, ensuring alignment with business needs.",
-      "Maintained a comprehensive history of the product by documenting all bugs and fixes for future reference.",
-      "Reviewed the team's work, providing feedback and ensuring it met quality standards.",
-      "Created detailed documentation on product features, test runs, and testing scenarios to support the QA process.",
+      "Lorem ipsum dolor sit amet",
     ],
   },
   {
-    date: "2023 DEC- 2024 MAR",
-    role: "Quality Assurance Specialist",
-    company: "Liveroute (Transportation Management Application)",
-    location: "Remote, Turkey",
+    date: "2099 JAN - 2099 JAN",
+    role: "Lorem ipsum dolor sit amet",
+    company: "Lorem ipsum dolor sit amet",
+    location: "Lorem ipsum dolor sit amet",
     responsibilties: [
-      "Executed manual testing for mobile applications to identify softwaredefects and ensure optimal product quality.",
-      "Documented test plans, software diagram, detailed bug reports, andtest results, and tracked issues through to resolution using bug tracking tools",
+      "Lorem ipsum dolor sit amet",
     ],
   },
 
   {
-    date: "2024 JAN - 2024 AUG",
-    role: "Quality Assurance Specialist",
-    company: "Westsidemarket (Vendor Management Platform)",
-    location: "Remote, Turkey",
+    date:"2099 JAN - 2099 JAN",
+    role: "Lorem ipsum dolor sit amet",
+    company: "Lorem ipsum dolor sit amet",
+    location: "Lorem ipsum dolor sit amet",
     responsibilties: [
-      "Managed all aspects of quality assurance for product releasesindependently. Analyzed data to identify trends, patterns, and insightsfor improving product quality.",
-      "SyriaConducted thorough testing and managed software and websiteprojects to ensure high standards.",
-      "Building a database from scratch in an ERP system and managing allsystem compatibility",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem ipsum dolor sit amet",
     ],
   },
   {
-    date: "2024 DEC - PRESENT",
-    role: "Product Owner",
-    company: "Freelancer",
-    location: "",
+    date:"2099 JAN - 2099 JAN",
+    role: "Lorem ipsum dolor sit amet",
+    company: "Lorem ipsum dolor sit amet",
+    location: "Lorem ipsum dolor sit amet",
     responsibilties: [
-      "Identified customer needs, scoped projects, and defined the product vision.",
-      "Assembled, led, and collaborated closely with small teams to execute and deliver high-quality solutions.",
-      "Drove end-to-end project execution, ensuring timely delivery and client satisfaction.",
-      "Acted as the main point of contact between clients and the team, gathering feedback and clarifying requirements.",
-      "Implemented client-requested changes and ensured they aligned with project goals and timelines.",
-      "Monitored the quality of work across the team, providing guidance and support to maintain high standards.",
-      "Developed and maintained forward-looking quality plans to ensure consistent project excellence.",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
 
-      "Made strategic decisions to balance business needs, technical feasibility, and team capacity.",
-      "Reviewed and prioritized tasks to keep projects on track and ensure critical features were delivered on time.",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
     ],
   },
 ];
 
 export const skillCategoriesInfo = [
   {
-    title: "Quality Assurnce",
-    //   icon: <Cpu className="h-5 w-5" />,
+    title: "Lorem ipsum dolor sit amet",
+   
     skills: [
       // Core QA Skills
-      "Manual Testing",
-      "Automation Testing",
-      "API Testing",
-      "Functional Testing",
-      "Regression Testing",
-      "Smoke Testing",
-      "Sanity Testing",
-      "Integration Testing",
-
-      "Cross-Browser Testing",
-      "Cross-Platform Testing",
-      "Performance Testing",
-      "Load Testing",
-      "Stress Testing",
-      "Usability Testing",
-
-      "Test Planning",
-      "Test Case Design",
-      "Test Scripts",
-
-      "Testing Documentation",
-
-      // Automation Frameworks & Tools
-      "Cypress",
-      "Playwright",
-      //   "Selenium WebDriver",
-      "Appium",
-      //   "TestNG",
-
-      //   "Mockito",
-      "Testim",
-      "Postman",
-      //   "REST Assured",
-      //   "SoapUI",
-      "JMeter",
-
-      // Test Management & Tracking
-      "Jira",
-      "ClickUp",
-      "Qase",
-
-      "Exploratory Testing",
-      "(BDD)",
-      "(TDD)",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      
     ],
   },
   {
-    title: "Software Development",
-    //   icon: <Layers className="h-5 w-5" />,
+    title: "Lorem ipsum dolor sit amet",
     skills: [
-      // Frontend
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Material UI",
-      "Bootstrap",
-      "JavaScript (ES6+)",
-      "TypeScript",
-      "React",
-      "Redux",
-      "Next.js",
-
-      // Backend
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      //   "GraphQL",
-
-      // Databases
-      "SQL",
-      "PostgreSQL",
-      "MySQL",
-
-      //   "Sequelize ORM",
-
-      // DevOps & Tools
-      //   "Git",
-      //   "GitHub",
-      //   "GitLab",
-      //   "CI/CD Pipelines",
-      //   "Docker",
-      //   "Nginx",
-      "Vercel",
-
-      "Clean Code Principles",
-
-      "GitHub",
-      "GitLab",
-
-      "CI/CD Pipelines",
-      "Newman",
-
-      "GitHub Actions",
+     
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+     
     ],
   },
   {
-    title: "Product Owner and Other",
-    //   icon: <Code className="h-5 w-5" />,
+    title: "Lorem ipsum dolor sit amet",
+  
     skills: [
-      // Project & Team Management
-      "Agile Methodologies",
-      "Scrum",
-      "Kanban",
-      "Project Planning",
-      "Team Leadership",
-      "Decision Making",
-
-      "Client Communication",
-      "Requirement Gathering",
-      "Business Analysis",
-      "Feedback Collection & Implementation",
-      "Conflict Resolution",
-      "Presentation Skills",
-
-      "Jira",
-      "ClickUp",
-
-      "Notion",
-
-      "Slack",
-
-      "Canva",
-
-      "Roadmaps & Timelines",
-
-      "Release Planning",
-      "Reporting & Analytics",
+     
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+     
     ],
   },
 ];

@@ -15,6 +15,7 @@ import { useKeenSlider } from "keen-slider/react";
 export default function ProjectDetail() {
   const [sliderRef] = useKeenSlider({
     slides: { perView: 7, spacing: 8 },
+    
   });
   const { id } = useParams();
   const projectId = Array.isArray(id) ? id[0] : id;
@@ -85,27 +86,32 @@ export default function ProjectDetail() {
                 className="object-contain bg-black/5 dark:bg-white/5"
               />
             </div>
-            <div ref={sliderRef} className="keen-slider">
-        {project.images.map((image, i) => (
-          <div key={i} className="keen-slider__slide !w-auto">
-            <button
-              onClick={() => setSelectedImage(i)}
-              className={`relative h-20 w-32 rounded-md overflow-hidden border-2 transition-all ${
-                selectedImage === i
-                  ? "border-primary"
-                  : "border-transparent"
-              }`}
-            >
-              <Image
-                src={image || "/placeholder.svg"}
-                alt={`${project.title} thumbnail ${i + 1}`}
-                fill
-                className="object-cover"
-              />
-            </button>
-          </div>
-        ))}
-      </div>
+           <div ref={sliderRef} className="keen-slider" >
+  {project.images.map((image, i) => (
+   <div
+  key={i}
+  className="keen-slider__slide !w-32 flex items-center justify-center"
+  style={{ flex: "0 0 auto" }} 
+>
+  <button
+    onClick={() => setSelectedImage(i)}
+    className={`relative h-20 w-32 rounded-md overflow-hidden border-2 transition-all box-border ${
+      selectedImage === i ? "border-primary" : "border-transparent"
+    }`}
+  >
+    <Image
+      src={image || "/placeholder.svg"}
+      alt={`${project.title} thumbnail ${i + 1}`}
+      width={128}
+      height={80}
+      className="object-cover w-full h-full block"
+    />
+  </button>
+</div>
+
+  ))}
+</div>
+
           </div>
 
           <div className="space-y-6">
