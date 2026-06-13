@@ -13,14 +13,13 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="mb-12 text-center"
       >
-        <h3 className="text-sm font-medium text-primary mb-2">MY JOURNEY</h3>
+        <h3 className="mb-2 text-sm font-medium text-primary">MY JOURNEY</h3>
         <h2 className="text-3xl font-bold">Work Experience</h2>
       </motion.div>
 
       <div className="relative">
-        {/* Timeline line */}
         <div
           aria-hidden="true"
           className="absolute left-0 h-full w-0.5 bg-primary/20 md:left-[13vw] md:-translate-x-1/2"
@@ -36,13 +35,11 @@ export default function Experience() {
               viewport={{ once: true }}
               className="relative flex flex-col justify-center md:flex-row-reverse"
             >
-              {/* Timeline dot */}
               <div
                 aria-hidden="true"
                 className="absolute left-0 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-[13vw]"
               />
 
-              {/* Content */}
               <div className="pl-8 md:w-3/4 md:pl-12">
                 <Card className="transition-shadow hover:shadow-md">
                   <CardContent className="p-6">
@@ -50,7 +47,7 @@ export default function Experience() {
                       {exp.date && (
                         <Badge
                           variant="outline"
-                          className="mb-2 bg-primary/10 text-primary border-primary/20"
+                          className="mb-2 border-primary/20 bg-primary/10 text-primary"
                         >
                           {exp.date}
                         </Badge>

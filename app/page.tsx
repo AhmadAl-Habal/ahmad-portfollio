@@ -17,9 +17,6 @@ export default function Home() {
         <Skills />
         <Projects />
         <Education />
-        {/* <Volunteering /> */}
-        {/* <CommunicationSkills /> */}
-        {/* <Achievements /> */}
         <Contact />
       </main>
       <Footer />

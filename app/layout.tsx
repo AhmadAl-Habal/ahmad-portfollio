@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   applicationName: "Ahmad Al-Habal Portfolio",
   authors: [{ name: "Ahmad Al-Habal" }],
   creator: "Ahmad Al-Habal",
+  robots: {
+    index: true,
+    follow: true,
+  },
   keywords: [
     "Ahmad Al-Habal",
     "QA Specialist",
@@ -31,6 +35,7 @@ export const metadata: Metadata = {
     description:
       "Explore Ahmad Al-Habal's portfolio across quality assurance, web engineering, product ownership, and project delivery.",
     type: "website",
+    locale: "en_US",
     siteName: "Ahmad Al-Habal Portfolio",
   },
   twitter: {

@@ -17,15 +17,15 @@ import { projectsInfo } from "@/data/info";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="scroll-mt-24 py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="mb-12 text-center"
       >
-        <h3 className="text-sm font-medium text-primary mb-2">MY WORK</h3>
+        <h3 className="mb-2 text-sm font-medium text-primary">MY WORK</h3>
         <h2 className="text-3xl font-bold">Projects</h2>
       </motion.div>
 
@@ -63,7 +63,7 @@ export default function Projects() {
                     <Badge
                       key={`${project.id}-${tech}-${i}`}
                       variant="outline"
-                      className="bg-primary/10 text-primary border-primary/20"
+                      className="border-primary/20 bg-primary/10 text-primary"
                     >
                       {tech}
                     </Badge>

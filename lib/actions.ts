@@ -1,17 +1,17 @@
 "use server"
 
 import { z } from "zod"
-import { Resend } from 'resend';
+import { Resend } from "resend"
 import { aboutMeInfo } from "../data/info";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Form validation schema
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  subject: z.string().min(3, { message: "Subject must be at least 3 characters" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+  name: z.string().trim().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().trim().email({ message: "Please enter a valid email address" }),
+  subject: z.string().trim().min(3, { message: "Subject must be at least 3 characters" }),
+  message: z.string().trim().min(10, { message: "Message must be at least 10 characters" }),
 })
 
 type FormData = z.infer<typeof formSchema>
@@ -43,24 +43,25 @@ export async function sendContactEmail(formData: FormData) {
       }
     }
 
-    const safeName = escapeHtml(formData.name)
-    const safeEmail = escapeHtml(formData.email)
-    const safeMessage = escapeHtml(formData.message).replace(/\n/g, "<br>")
+    const { name, email, subject, message } = validatedFields.data
+    const safeName = escapeHtml(name)
+    const safeEmail = escapeHtml(email)
+    const safeMessage = escapeHtml(message).replace(/\n/g, "<br>")
 
     const { error } = await resend.emails.send({
       from: "portfolio@resend.dev",
       to: aboutMeInfo.email,
-      subject: `Portfolio Contact: ${formData.subject}`,
+      subject: `Portfolio Contact: ${subject}`,
       text: `
-        Name: ${formData.name}
-        Email: ${formData.email}
+        Name: ${name}
+        Email: ${email}
         
         Message:
-        ${formData.message}
+        ${message}
       `,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 5px;">
-          <h2 style="color: #2e7d32;">New Message from Your Portfolio</h2>
+          <h2 style="color: #b91c1c;">New Message from Your Portfolio</h2>
           <p><strong>Name:</strong> ${safeName}</p>
           <p><strong>Email:</strong> ${safeEmail}</p>
           <h3 style="margin-top: 20px;">Message:</h3>

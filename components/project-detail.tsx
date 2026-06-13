@@ -21,7 +21,7 @@ export default function ProjectDetail({
   const selectedImageSrc = project.images[selectedImage] ?? "/placeholder.svg";
 
   return (
-    <article className="container mx-auto px-4 py-16 md:py-24">
+    <article className="container mx-auto px-4 pb-16 pt-10 md:py-20">
       <div className="mb-8 flex flex-wrap items-center gap-3">
         <Button variant="outline" asChild>
           <Link href="/#projects" aria-label="Back to the projects section">
@@ -79,8 +79,12 @@ export default function ProjectDetail({
             />
           </div>
 
+          <p className="mb-3 text-sm text-muted-foreground" aria-live="polite">
+            Screenshot {selectedImage + 1} of {project.images.length}
+          </p>
+
           <div
-            className="flex gap-3 overflow-x-auto pb-2"
+            className="scrollbar-hide flex gap-3 overflow-x-auto pb-2"
             aria-label={`${project.title} image gallery`}
           >
             {project.images.map((image, index) => (
@@ -89,7 +93,7 @@ export default function ProjectDetail({
                 type="button"
                 onClick={() => setSelectedImage(index)}
                 aria-label={`Show ${project.title} screenshot ${index + 1}`}
-                aria-current={selectedImage === index ? "true" : undefined}
+                aria-pressed={selectedImage === index}
                 className={`relative h-20 w-32 shrink-0 overflow-hidden rounded-md border-2 bg-muted transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
                   selectedImage === index
                     ? "border-primary"
@@ -108,8 +112,13 @@ export default function ProjectDetail({
           </div>
         </div>
 
-        <aside className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm">
-          <h2 className="mb-3 text-2xl font-bold">Project Overview</h2>
+        <section
+          aria-labelledby="project-overview-title"
+          className="rounded-lg border bg-card p-6 text-card-foreground shadow-sm"
+        >
+          <h2 id="project-overview-title" className="mb-3 text-2xl font-bold">
+            Project Overview
+          </h2>
           <div className="space-y-4 text-muted-foreground">
             {project.description
               .trim()
@@ -118,7 +127,7 @@ export default function ProjectDetail({
                 <p key={paragraph}>{paragraph}</p>
               ))}
           </div>
-        </aside>
+        </section>
       </div>
 
       {(project.challenges || project.outcomes) && (

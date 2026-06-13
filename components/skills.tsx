@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { skillCategoriesInfo } from "../data/info";
 import { Badge } from "@/components/ui/badge";
+import { skillCategoriesInfo } from "@/data/info";
+
 export default function Skills() {
   return (
     <section id="skills" className="scroll-mt-24 py-24">
@@ -12,9 +13,9 @@ export default function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="mb-12 text-center"
       >
-        <h3 className="text-sm font-medium text-primary mb-2">MY EXPERTISE</h3>
+        <h3 className="mb-2 text-sm font-medium text-primary">MY EXPERTISE</h3>
         <h2 className="text-3xl font-bold">Skills & Technologies</h2>
       </motion.div>
 
@@ -28,16 +29,14 @@ export default function Skills() {
             viewport={{ once: true }}
           >
             <Card className="h-full transition-shadow hover:shadow-md">
-              <CardContent className="p-6 h-full">
-                <div className="flex items-center gap-2 mb-4">
-                  <h3 className="text-xl font-bold mb-3">{category.title}</h3>
-                </div>
+              <CardContent className="h-full p-6">
+                <h3 className="mb-5 text-xl font-bold">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, i) => (
-                      <Badge
+                    <Badge
                       key={`${category.title}-${skill}-${i}`}
                       variant="outline"
-                      className="bg-primary/10 text-primary border-primary/20"
+                      className="border-primary/20 bg-primary/10 text-primary"
                     >
                       {skill}
                     </Badge>

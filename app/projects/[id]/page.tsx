@@ -12,7 +12,13 @@ function isProjectId(id: string): id is ProjectId {
 }
 
 function getMetaDescription(description: string) {
-  return description.replace(/\s+/g, " ").trim().slice(0, 160);
+  const cleanDescription = description.replace(/\s+/g, " ").trim();
+
+  if (cleanDescription.length <= 160) {
+    return cleanDescription;
+  }
+
+  return `${cleanDescription.slice(0, 157).trimEnd()}...`;
 }
 
 export function generateStaticParams() {
@@ -36,6 +42,7 @@ export async function generateMetadata({
   return {
     title: project.title,
     description,
+    authors: [{ name: "Ahmad Al-Habal" }],
     openGraph: {
       title: `${project.title} | Ahmad Al-Habal`,
       description,
