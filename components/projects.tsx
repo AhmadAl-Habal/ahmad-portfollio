@@ -29,35 +29,39 @@ export default function Projects() {
         <h2 className="text-3xl font-bold">Projects</h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projectsInfo.map((project, index) => (
           <motion.div
-            key={index}
+            key={project.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <Card className="h-full flex flex-col overflow-hidden">
-              <div className="relative h-48 w-full">
+            <Card className="group flex h-full flex-col overflow-hidden transition-shadow hover:shadow-md">
+              <div className="relative h-48 w-full border-b bg-muted">
                 <Image
                   src={project.image || "/placeholder.svg"}
-                  alt={project.title}
+                  alt={`${project.title} project preview`}
                   fill
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 />
               </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl leading-tight">
+                  {project.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground mb-4 line-clamp-3">
+              <CardContent className="flex flex-grow flex-col">
+                <p className="mb-4 min-h-[4.5rem] text-muted-foreground line-clamp-3">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="mt-auto flex flex-wrap gap-2">
                   {project.technologies.map((tech, i) => (
                     <Badge
-                      key={i}
+                      key={`${project.id}-${tech}-${i}`}
                       variant="outline"
                       className="bg-primary/10 text-primary border-primary/20"
                     >
@@ -66,11 +70,11 @@ export default function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" asChild>
+              <CardFooter className="pt-0">
+                <Button variant="outline" size="sm" asChild className="w-full">
                   <Link
                     href={`/projects/${project.id}`}
-                    className="flex items-center gap-1"
+                    aria-label={`View details for ${project.title}`}
                   >
                     <ExternalLink className="h-4 w-4" />
                     View Details

@@ -1,17 +1,7 @@
 export const aboutMeInfo = {
   name: "Ahmad Al-Habal",
-  role: "QA Specalist | Web Engineer | Product Owner",
-  desc: `      Hello! I'm Ahmad, a passionate QA Specialist with over 4 years of
-            hands-on experience in ensuring quality across both web and mobile
-            applications. My background goes beyond traditional testing—I bring
-            a holistic understanding of the entire product lifecycle, from
-            frontend and backend development to system architecture and
-            deployment. What sets me apart is my ability to take full ownership
-            of complex projects: designing testing structures, building
-            workflows, analyzing requirements, and collaborating with teams to
-            deliver reliable, scalable, and user-centered solutions. I don’t
-            just test for bugs; I ensure that every feature aligns with business
-            goals, technical standards, and the best user experience possible`,
+  role: "QA Specialist | Web Engineer | Product Owner",
+  desc: `QA Specialist, Web Engineer, and Product Owner with over 4 years of hands-on experience across web and mobile applications. I combine structured testing, product thinking, and development knowledge to help teams deliver reliable, scalable, and user-centered solutions that align with business goals and technical standards.`,
   phone: "930858352",
   email: "ahmadhabal9@gmail.com",
   address: "Rukin-Aldin, Damascus, Syria",
@@ -20,65 +10,46 @@ export const aboutMeInfo = {
   profileImg: "/images/profile.jpg",
   backgroundExp: [
     {
-      icon: `CircleCheckBig`,
+      icon: "CircleCheckBig",
       backgroundTitle: "Quality Assurance",
-      backgroundDesc: `While my first steps in tech were with web development, my professional path really took shape when I moved into Quality Assurance. I started out with a focus on basic testing tasks, but as I worked on more projects, I continuously built up my skills and applied them across different types of applications and domains.
+      backgroundDesc: `My professional path took shape in Quality Assurance after starting in web development. I began with core testing tasks and gradually expanded into functional, regression, integration, and performance testing across different applications and domains.
 
-  Over time, I expanded my experience from manual testing into broader areas—covering functional, regression, integration, and performance testing. Along the way, I also developed leadership and decision-making skills, especially in situations where ensuring quality required carefully weighing options to balance timelines, features, and overall project goals.
-
-  By combining structured QA practices with practical project experience, I was able to help deliver products that were not only reliable but also aligned with long-term maintainability and quality standards.`,
+Over time, I developed stronger ownership, leadership, and decision-making skills by balancing release quality with timelines, feature priorities, and long-term maintainability.`,
     },
     {
-      icon: `Globe`,
+      icon: "Globe",
       backgroundTitle: "Web Development",
-      backgroundDesc: `My journey in tech actually started with web development. I was curious about how websites and apps were built, so I began with frontend work—building simple pages and experimenting with design and interactivity. When I moved into Quality Assurance and while testing different applications, I naturally gain deeper understanding of how they were built and connected. That hands-on exposure pushed me to grow as a developer in parallel with my QA work.
+      backgroundDesc: `My journey in tech started with web development. I was curious about how websites and apps were built, so I began with frontend work, simple pages, and experiments in design and interactivity.
 
-  I began applying what I learned by building small web apps and online stores—mainly using React on the frontend and experimenting with Node.js and Express on the backend. Working from both sides gave me a clearer picture of how applications function end to end, and it allowed me to apply QA principles directly into my development process. This combination not only improved my dev skills but also helped me deliver more reliable, higher-quality projects`,
+When I moved into Quality Assurance, I naturally gained a deeper understanding of how applications were built and connected. I applied that learning by building small web apps and online stores with React, Node.js, and Express, which helped me bring QA thinking directly into development.`,
     },
     {
-      icon: `Layers`,
+      icon: "Layers",
       backgroundTitle: "Project Ownership",
-      backgroundDesc: `In recent years, I’ve developed my skills further to take on ownership of small to mid-sized projects from start to finish. Thanks to my combined background in QA and development, I understand how different parts of a project connect together—both technically and from a business perspective.
+      backgroundDesc: `In recent years, I have taken ownership of small to mid-sized projects from start to finish. My combined QA and development background helps me understand how technical decisions, client needs, and business goals connect.
 
-  This allowed me to bridge the gap between clients, teams, and project goals. By applying the right methodologies, such as Agile, I could align expectations, ensure smooth collaboration, and deliver the best possible experience. My focus on quality and development principles also played a big role in making sure every project I owned was not only delivered on time but also scalable, maintainable, and valuable to the client`,
+I use Agile practices to align expectations, support collaboration, and keep delivery focused on quality, maintainability, and client value.`,
     },
   ],
 };
+
 export const experiencesInfo = [
   {
-    date: "2021 JAN - 2023 DEC",
-    role: "Quality Assurance Specialist , QA Manager",
-    company: "Genophore (Life Sciences Research and Molecular Design)",
-    location: "Remote, America",
-    responsibilties: [
-      "Managed all Quality Assurance tasks for product releases independently, ensuring high quality and timely delivery.",
-      "Trained and guided new testers on work processes and platform features.",
-      "Collaborated with product owners and customers to discuss and define new features, ensuring alignment with business needs.",
-      "Maintained a comprehensive history of the product by documenting all bugs and fixes for future reference.",
-      "Reviewed the team's work, providing feedback and ensuring it met quality standards.",
-      "Created detailed documentation on product features, test runs, and testing scenarios to support the QA process.",
-    ],
-  },
-  {
-    date: "2023 DEC- 2024 MAR",
-    role: "Quality Assurance Specialist",
-    company: "Liveroute (Transportation Management Application)",
-    location: "Remote, Turkey",
-    responsibilties: [
-      "Executed manual testing for mobile applications to identify softwaredefects and ensure optimal product quality.",
-      "Documented test plans, software diagram, detailed bug reports, andtest results, and tracked issues through to resolution using bug tracking tools",
-    ],
-  },
-
-  {
-    date: "2024 JAN - 2024 AUG",
-    role: "Quality Assurance Specialist",
-    company: "Westsidemarket (Vendor Management Platform)",
-    location: "Remote, Turkey",
-    responsibilties: [
-      "Managed all aspects of quality assurance for product releasesindependently. Analyzed data to identify trends, patterns, and insightsfor improving product quality.",
-      "SyriaConducted thorough testing and managed software and websiteprojects to ensure high standards.",
-      "Building a database from scratch in an ERP system and managing allsystem compatibility",
+    date: "2025 DEC - PRESENT",
+    role: "Quality Engineer",
+    company: "Averroes.ai",
+    location: "Remote",
+    responsibilities: [
+      "Served as the first dedicated Quality Engineer in the company, building and owning the QA function across product releases, demos, and customer-facing workflows.",
+      "Led end-to-end manual and exploratory testing for 10+ features in a fast-moving startup environment.",
+      "Ensured product stability under tight release timelines and high market pressure.",
+      "Owned daily Jira quality operations, including bug intake, cleanup, prioritization, notes, release bug planning, and cross-functional follow-up.",
+      "Collaborated closely with developers and product stakeholders to validate issues, clarify defects, and support release decisions.",
+      "Supported release readiness through regression testing, risk assessment, issue validation, and go/no-go quality feedback.",
+      "Acted as a key quality owner during high-pressure demos and product releases.",
+      "Coordinated urgent testing efforts, tracked critical fixes, and validated late-stage product changes.",
+      "Helped the team maintain confidence in production readiness by identifying risks across frontend, backend, and overall product behavior.",
+      "Applied strong attention to detail, fast defect detection, multitasking, and broad software understanding to uncover issues beyond standard manual test execution.",
     ],
   },
   {
@@ -86,7 +57,7 @@ export const experiencesInfo = [
     role: "Product Owner",
     company: "Freelancer",
     location: "",
-    responsibilties: [
+    responsibilities: [
       "Identified customer needs, scoped projects, and defined the product vision.",
       "Assembled, led, and collaborated closely with small teams to execute and deliver high-quality solutions.",
       "Drove end-to-end project execution, ensuring timely delivery and client satisfaction.",
@@ -94,70 +65,89 @@ export const experiencesInfo = [
       "Implemented client-requested changes and ensured they aligned with project goals and timelines.",
       "Monitored the quality of work across the team, providing guidance and support to maintain high standards.",
       "Developed and maintained forward-looking quality plans to ensure consistent project excellence.",
-
       "Made strategic decisions to balance business needs, technical feasibility, and team capacity.",
       "Reviewed and prioritized tasks to keep projects on track and ensure critical features were delivered on time.",
     ],
   },
+  {
+    date: "2024 JAN - 2024 AUG",
+    role: "Quality Assurance Specialist",
+    company: "Westsidemarket (Vendor Management Platform)",
+    location: "Remote, Turkey",
+    responsibilities: [
+      "Managed quality assurance for product releases independently and analyzed data to identify trends, patterns, and insights for improving product quality.",
+      "Conducted thorough testing and managed software and website projects to maintain high standards.",
+      "Built a database from scratch in an ERP system and managed all system compatibility.",
+    ],
+  },
+  {
+    date: "2023 DEC - 2024 MAR",
+    role: "Quality Assurance Specialist",
+    company: "Liveroute (Transportation Management Application)",
+    location: "Remote, Turkey",
+    responsibilities: [
+      "Executed manual testing for mobile applications to identify software defects and ensure product quality.",
+      "Documented test plans, software diagrams, detailed bug reports, and test results, then tracked issues through resolution using bug-tracking tools.",
+    ],
+  },
+  {
+    date: "2021 JAN - 2023 DEC",
+    role: "Quality Assurance Specialist, QA Manager",
+    company: "Genophore (Life Sciences Research and Molecular Design)",
+    location: "Remote, America",
+    responsibilities: [
+      "Managed all Quality Assurance tasks for product releases independently, ensuring high quality and timely delivery.",
+      "Trained and guided new testers on work processes and platform features.",
+      "Collaborated with product owners and customers to discuss and define new features, ensuring alignment with business needs.",
+      "Maintained a comprehensive history of the product by documenting all bugs and fixes for future reference.",
+      "Reviewed the team's work, provided feedback, and ensured it met quality standards.",
+      "Created detailed documentation for product features, test runs, and testing scenarios to support the QA process.",
+    ],
+  },
 ];
+
+
 
 export const skillCategoriesInfo = [
   {
-    title: "Quality Assurnce",
-    //   icon: <Cpu className="h-5 w-5" />,
+    title: "Quality Assurance",
     skills: [
-      // Core QA Skills
       "Manual Testing",
       "Automation Testing",
       "API Testing",
       "Functional Testing",
       "Regression Testing",
+       "Exploratory Testing",
       "Smoke Testing",
       "Sanity Testing",
       "Integration Testing",
-
       "Cross-Browser Testing",
       "Cross-Platform Testing",
       "Performance Testing",
       "Load Testing",
       "Stress Testing",
       "Usability Testing",
-
       "Test Planning",
       "Test Case Design",
       "Test Scripts",
-
       "Testing Documentation",
-
-      // Automation Frameworks & Tools
       "Cypress",
       "Playwright",
-      //   "Selenium WebDriver",
       "Appium",
-      //   "TestNG",
-
-      //   "Mockito",
       "Testim",
       "Postman",
-      //   "REST Assured",
-      //   "SoapUI",
       "JMeter",
-
-      // Test Management & Tracking
       "Jira",
       "ClickUp",
       "Qase",
-
-      "Exploratory Testing",
-      "(BDD)",
-      "(TDD)",
+     "Jira","confluence",
+      "BDD",
+      "TDD",
     ],
   },
   {
     title: "Software Development",
-    //   icon: <Layers className="h-5 w-5" />,
     skills: [
-      // Frontend
       "HTML5",
       "CSS3",
       "Tailwind CSS",
@@ -168,97 +158,65 @@ export const skillCategoriesInfo = [
       "React",
       "Redux",
       "Next.js",
-
-      // Backend
       "Node.js",
       "Express.js",
       "REST APIs",
-      //   "GraphQL",
-
-      // Databases
       "SQL",
       "PostgreSQL",
       "MySQL",
-
-      //   "Sequelize ORM",
-
-      // DevOps & Tools
-      //   "Git",
-      //   "GitHub",
-      //   "GitLab",
-      //   "CI/CD Pipelines",
-      //   "Docker",
-      //   "Nginx",
       "Vercel",
-
       "Clean Code Principles",
-
       "GitHub",
       "GitLab",
-
       "CI/CD Pipelines",
       "Newman",
-
       "GitHub Actions",
+      "Bitbucket"
     ],
   },
   {
-    title: "Product Owner and Other",
-    //   icon: <Code className="h-5 w-5" />,
+    title: "Product Ownership & Collaboration",
     skills: [
-      // Project & Team Management
       "Agile Methodologies",
       "Scrum",
       "Kanban",
       "Project Planning",
       "Team Leadership",
       "Decision Making",
-
       "Client Communication",
       "Requirement Gathering",
       "Business Analysis",
       "Feedback Collection & Implementation",
       "Conflict Resolution",
       "Presentation Skills",
-
       "Jira",
       "ClickUp",
-
       "Notion",
-
       "Slack",
-
       "Canva",
-
       "Roadmaps & Timelines",
-
       "Release Planning",
       "Reporting & Analytics",
     ],
   },
 ];
+
 export const projectsInfo = [
   {
     id: "laploby",
-    title: "Ecommerce Store Template",
+    title: "E-commerce Store Template",
     description:
-      "A small e-commerce store that showcases products, allowing customers to browse available products with admin panel.",
+      "A lightweight e-commerce store template for browsing products, contacting the seller, and managing inventory through an admin panel.",
     technologies: [
-      // Frontend
       "React",
       "Vite",
       "Tailwind CSS",
-      // Backend
       "Node.js",
       "Express.js",
-      // Database
       "PostgreSQL",
-      // State & Data
       "RESTful API",
       "Axios",
-      // Admin Panel & Auth
       "JWT Authentication",
-      // Tools & Others
       "Canva",
       "GitHub",
       "Vercel",
@@ -270,27 +228,19 @@ export const projectsInfo = [
     id: "jobby-finder",
     title: "Jobby Finder",
     description:
-      "A React-based platform where developers can showcase their profiles and companies can post job opportunities, making it easier to connect talent with employers",
+      "A React-based platform where developers can showcase profiles and companies can post job opportunities to connect talent with employers.",
     technologies: [
-      // Frontend
       "React",
       "Vite",
       "Tailwind CSS",
-      // Backend
       "Node.js",
       "Express.js",
-      // Database
       "PostgreSQL",
-      // State & Data
       "RESTful API",
       "Axios",
-      // Admin Panel & Auth
       "JWT Authentication",
-      // Tools & Others
-      // "Canva",
       "GitHub",
       "Vercel",
-      // "Render",
     ],
     image: "/images/jobby-finder/welcome.png",
   },
@@ -300,25 +250,17 @@ export const projectsInfo = [
     description:
       "A responsive product management dashboard for adding, editing, and organizing warehouse inventory.",
     technologies: [
-      // Frontend
       "React",
       "Vite",
       "Tailwind CSS",
-      // Backend
       "Node.js",
       "Express.js",
-      // Database
       "PostgreSQL",
-      // State & Data
       "RESTful API",
       "Axios",
-      // Admin Panel & Auth
       "JWT Authentication",
-      // Tools & Others
-      // "Canva",
       "GitHub",
       "Vercel",
-      // "Render",
     ],
     image: "/images/dashstack/welcome.png",
   },
@@ -326,7 +268,7 @@ export const projectsInfo = [
     id: "qa-stuff",
     title: "Quality Assurance Samples",
     description:
-      "A collection of QA samples showcasing manual and automated testing practices using modern tools.",
+      "A collection of QA samples showcasing manual and automated testing practices with modern tools.",
     technologies: [
       "Playwright",
       "Cypress",
@@ -335,32 +277,26 @@ export const projectsInfo = [
       "Qase",
       "Testim",
       "Jira",
-      "Clickup",
+      "ClickUp",
       "Linear",
       "TypeScript",
-      // "Push Notifications",
-      // "RxDart",
-      // "Google Maps",
-      // "Socket IO",
-      // "NFC",
-      // "Shared Preferences",
     ],
     image: "/images/qa-samples/welcome.png",
   },
   {
     id: "product-owner-stuff",
-    title: "Systems analysis and mangements",
+    title: "Systems Analysis and Management",
     description:
-      "A collection of Systems Analysis & Management samples using modern tools.",
+      "A collection of systems analysis and management samples using modern product and collaboration tools.",
     technologies: [
       "Jira",
       "Canva",
-      "Clickup",
+      "ClickUp",
       "Slack",
       "Miro",
       "Figma",
       "Notion",
-      "Vecel Analytics",
+      "Vercel Analytics",
     ],
     image: "/images/product-owner/welcome.png",
   },
@@ -368,8 +304,8 @@ export const projectsInfo = [
     id: "portfolio-template",
     title: "Portfolio Template",
     description:
-      "A Portfolio Template built with Next.js to showcase your projects, skills, and experience in a clean and responsive design.",
-    technologies: ["Next", "React", "Tailwind", "Lucid", "Github", "Vercel"],
+      "A Next.js portfolio template for showcasing projects, skills, and experience in a clean, responsive design.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Lucide", "GitHub", "Vercel"],
     image: "/images/portfolio-template/welcome.png",
   },
 ];
@@ -377,20 +313,15 @@ export const projectsInfo = [
 export const projectsDetails = {
   "jobby-finder": {
     title: "Jobby Finder",
-    description: `
-      This project is a web application built with React that serves as a bridge between developers and companies. Developers can create profiles, highlight their skills, and explore available job listings. On the other side, companies can register to post jobs, manage applications, and discover talent that matches their needs. The platform emphasizes a clean, user-friendly interface to ensure smooth navigation and accessibility. With real-time updates and responsive design, it provides an efficient space for professionals and employers to connect seamlessly
-      `,
+    description: `Jobby Finder is a React web application that connects developers with companies. Developers can create profiles, highlight their skills, and explore job listings, while companies can post opportunities, manage applications, and discover relevant talent.
+
+The project focuses on clean navigation, responsive design, and a straightforward experience for both job seekers and employers.`,
     technologies: [
-      // Frontend
       "React",
       "Vite",
       "Tailwind CSS",
-
-      // State & Data
       "Mock API",
       "Fetch Requests",
-
-      // Tools & Others
       "Canva",
       "GitHub",
       "Vercel",
@@ -402,37 +333,25 @@ export const projectsDetails = {
       "/images/jobby-finder/4.png",
       "/images/jobby-finder/5.png",
     ],
-    challenges: ``,
-    outcomes: ``,
+    challenges: "",
+    outcomes: "",
     deployment: "https://jobs-application-main.vercel.app/",
   },
   laploby: {
-    title: "Ecommerce Store Template",
-    description: `
-     This project is a simple e-commerce platform designed for easy product browsing without requiring users to create an account or log in. Products are organized into categories and brands, making it easy for customers to find what they’re looking for. Each product includes a direct WhatsApp contact option, allowing instant communication with the seller.
+    title: "E-commerce Store Template",
+    description: `This project is a simple e-commerce platform designed for easy product browsing without requiring users to create an account or log in. Products are organized into categories and brands, and each product includes a direct WhatsApp contact option for quick communication with the seller.
 
-The store also features a Frequently Asked Questions (FAQ) section to provide quick answers and improve the customer experience. On the backend, there is an admin panel accessible only after admin login. From there, administrators can add, edit, or remove products, manage categories, and adjust any store details with full control.
-
-The goal is to keep the store lightweight, user-friendly, and practical—focusing on seamless browsing for customers and straightforward management for admins
-
-    `,
+The store also includes an FAQ section and an admin panel for adding, editing, or removing products, managing categories, and updating store details. The goal is a lightweight, practical store that keeps browsing simple for customers and management straightforward for admins.`,
     technologies: [
-      // Frontend
       "React",
       "Vite",
       "Tailwind CSS",
-      // Backend
       "Node.js",
       "Express.js",
-      // Database
       "PostgreSQL",
-      // State & Data
       "RESTful API",
       "Axios",
-      // Admin Panel & Auth
       "JWT Authentication",
-      // Tools & Others
-      // "Canva",
       "GitHub",
       "Vercel",
       "Render",
@@ -454,35 +373,27 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "/images/laploby/14.png",
       "/images/laploby/15.png",
     ],
-    challenges: ``,
-    outcomes: ``,
+    challenges: "",
+    outcomes: "",
     deployment: "https://laplobby.vercel.app/",
   },
   dashstack: {
     title: "DashStack",
-    description: `
-      This project is a responsive product management dashboard built with React, Node.js, and Tailwind CSS. It allows admins to manage warehouse inventory efficiently by adding, updating, and deleting products, as well as categorizing and organizing them for better tracking. The system is designed to streamline product handling, providing a clear interface and smooth workflows. Its responsive design ensures accessibility across devices, making warehouse operations easier to manage anytime, anywhere.
-      `,
+    description: `DashStack is a responsive product management dashboard built with React, Node.js, and Tailwind CSS. It helps admins manage warehouse inventory by adding, updating, deleting, categorizing, and organizing products.
+
+The interface is designed to streamline product handling and keep inventory workflows accessible across devices.`,
     technologies: [
-      // Frontend
       "React",
       "Vite",
       "Tailwind CSS",
-      // Backend
       "Node.js",
       "Express.js",
-      // Database
       "PostgreSQL",
-      // State & Data
       "RESTful API",
       "Axios",
-      // Admin Panel & Auth
       "JWT Authentication",
-      // Tools & Others
-      // "Canva",
       "GitHub",
       "Vercel",
-      // "Render",
     ],
     images: [
       "/images/dashstack/1.png",
@@ -492,15 +403,15 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "/images/dashstack/5.png",
       "/images/dashstack/6.png",
     ],
-    challenges: ``,
-    outcomes: ``,
+    challenges: "",
+    outcomes: "",
     deployment: "https://dash-stack-two.vercel.app/",
   },
   "qa-stuff": {
     title: "Quality Assurance Samples",
-    description: `
-   QA Samples is a dedicated project that highlights different aspects of Quality Assurance work through practical examples. It includes full test plans for web applications created with tools like Qase, along with detailed test cases, test scripts, and execution flows. The project also showcases automation testing examples with Playwright and Cypress, supported by sample code and real execution runs. Additionally, it contains performance testing scenarios with JMeter, illustrating how to measure and analyze system reliability under load. This collection serves as a portfolio of QA practices, combining manual and automated testing approaches to demonstrate a complete quality process.
-      `,
+    description: `QA Samples highlights practical Quality Assurance work through test plans, test cases, test scripts, execution flows, and automation examples. It includes materials created with tools such as Qase, Playwright, Cypress, Postman, and JMeter.
+
+The collection demonstrates both manual and automated testing approaches, including performance testing scenarios used to evaluate reliability under load.`,
     technologies: [
       "Playwright",
       "Cypress",
@@ -509,7 +420,7 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "Qase",
       "Testim",
       "Jira",
-      "Clickup",
+      "ClickUp",
       "Linear",
       "TypeScript",
     ],
@@ -524,27 +435,23 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "/images/qa-samples/8.png",
       "/images/qa-samples/9.png",
       "/images/qa-samples/10.png",
-      // "/images/qa-samples/Playwright genophore test.mp4",
-      // "/images/qa-samples/Qase project.mp4",
     ],
-    challenges: ``,
-    outcomes: ``,
-    deployment: ``,
+    challenges: "",
+    outcomes: "",
+    deployment: "",
   },
   "product-owner-stuff": {
-    title: "Systems analysis and mangements",
-    description: `
-  A collection of Systems analysis and mangements samples highlighting systems analysis and management practices, including workflow diagrams, process mappings, and project planning insights. Demonstrates manual and automated testing strategies with modern tools and methodologies.
-      `,
+    title: "Systems Analysis and Management",
+    description: `A collection of systems analysis and management samples, including workflow diagrams, process mappings, and project planning insights created with modern product and collaboration tools.`,
     technologies: [
       "Jira",
       "Canva",
-      "Clickup",
+      "ClickUp",
       "Slack",
       "Miro",
       "Figma",
       "Notion",
-      "Vecel Analytics",
+      "Vercel Analytics",
     ],
     images: [
       "/images/product-owner/1.png",
@@ -553,26 +460,29 @@ The goal is to keep the store lightweight, user-friendly, and practical—focusi
       "/images/product-owner/4.png",
       "/images/product-owner/5.png",
     ],
-    challenges: ``,
-    outcomes: ``,
-    deployment: ``,
+    challenges: "",
+    outcomes: "",
+    deployment: "",
   },
   "portfolio-template": {
     title: "Portfolio Template",
-    description: `
-   This Portfolio Template uses Next.js for fast, SEO-friendly pages and Tailwind CSS for modern, responsive design. It includes sections for projects, about me, and contact, with reusable React components. The template is fully customizable, allowing you to update colors, images, and content easily. It’s perfect for developers and designers who want a professional online presence. You can deploy it instantly on platforms like Vercel.
-      `,
-    technologies: ["Next", "React", "Tailwind", "Lucid", "Github", "Vercel"],
+    description: `This Portfolio Template uses Next.js for fast, SEO-friendly pages and Tailwind CSS for modern, responsive design. It includes reusable sections for projects, about content, and contact information, making it easy to customize and deploy on platforms like Vercel.`,
+    technologies: ["Next.js", "React", "Tailwind CSS", "Lucide", "GitHub", "Vercel"],
     images: ["/images/portfolio-template/1.png"],
-    challenges: ``,
-    outcomes: ``,
-    deployment: ``,
+    challenges: "",
+    outcomes: "",
+    deployment: "",
   },
 };
 
+export type ProjectId = keyof typeof projectsDetails;
+export type ProjectDetailInfo = (typeof projectsDetails)[ProjectId];
+
+export const projectIds = Object.keys(projectsDetails) as ProjectId[];
+
 export const educationInfo = {
   name: "Computer and Automation Engineering",
-  collage: "Damascus University",
+  college: "Damascus University",
   date: "10/2019 - Present",
   desc: "",
 };
@@ -586,6 +496,7 @@ export const contactMeInfo = {
   linkedin: "https://www.linkedin.com/in/ahmad-al-habal-75b16621b/",
   github: "https://github.com/AhmadAl-Habal/",
 };
+
 export const footerInfo = {
   name: "Ahmad Al-Habal",
   github: "https://github.com/AhmadAl-Habal/",

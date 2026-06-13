@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Cpu, Layers } from "lucide-react";
 import { skillCategoriesInfo } from "../data/info";
 import { Badge } from "@/components/ui/badge";
 export default function Skills() {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="scroll-mt-24 py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,27 +18,24 @@ export default function Skills() {
         <h2 className="text-3xl font-bold">Skills & Technologies</h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {skillCategoriesInfo.map((category, index) => (
           <motion.div
-            key={index}
+            key={category.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <Card className="h-full">
+            <Card className="h-full transition-shadow hover:shadow-md">
               <CardContent className="p-6 h-full">
                 <div className="flex items-center gap-2 mb-4">
-                  {/* <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    {category.icon}
-                  </div> */}
                   <h3 className="text-xl font-bold mb-3">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, i) => (
                       <Badge
-                      key={i}
+                      key={`${category.title}-${skill}-${i}`}
                       variant="outline"
                       className="bg-primary/10 text-primary border-primary/20"
                     >

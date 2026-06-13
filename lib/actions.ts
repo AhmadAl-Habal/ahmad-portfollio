@@ -16,6 +16,20 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>
 
+function escapeHtml(value: string) {
+  return value.replace(/[&<>"']/g, (character) => {
+    const entities: Record<string, string> = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    }
+
+    return entities[character]
+  })
+}
+
 export async function sendContactEmail(formData: FormData) {
   try {
     // Validate form data
@@ -29,7 +43,11 @@ export async function sendContactEmail(formData: FormData) {
       }
     }
 
-    const { data, error } = await resend.emails.send({
+    const safeName = escapeHtml(formData.name)
+    const safeEmail = escapeHtml(formData.email)
+    const safeMessage = escapeHtml(formData.message).replace(/\n/g, "<br>")
+
+    const { error } = await resend.emails.send({
       from: "portfolio@resend.dev",
       to: aboutMeInfo.email,
       subject: `Portfolio Contact: ${formData.subject}`,
@@ -43,10 +61,10 @@ export async function sendContactEmail(formData: FormData) {
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 5px;">
           <h2 style="color: #2e7d32;">New Message from Your Portfolio</h2>
-          <p><strong>Name:</strong> ${formData.name}</p>
-          <p><strong>Email:</strong> ${formData.email}</p>
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
           <h3 style="margin-top: 20px;">Message:</h3>
-          <p style="background-color: #f5f5f5; padding: 15px; border-radius: 4px;">${formData.message.replace(/\n/g, "<br>")}</p>
+          <p style="background-color: #f5f5f5; padding: 15px; border-radius: 4px;">${safeMessage}</p>
         </div>
       `,
     });

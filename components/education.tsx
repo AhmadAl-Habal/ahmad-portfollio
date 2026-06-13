@@ -8,7 +8,7 @@ import { educationInfo } from "../data/info";
 
 export default function Education() {
   return (
-    <section id="education" className="py-24">
+    <section id="education" className="scroll-mt-24 py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -27,11 +27,11 @@ export default function Education() {
         viewport={{ once: true }}
         className="max-w-3xl mx-auto"
       >
-        <Card>
+        <Card className="transition-shadow hover:shadow-md">
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
-                <GraduationCap className="h-8 w-8 text-primary" />
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <GraduationCap className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
 
               <div className="flex-1">
@@ -41,7 +41,7 @@ export default function Education() {
                       {educationInfo.name}
                     </h3>
                     <p className="text-primary font-medium">
-                      {educationInfo.collage}
+                      {educationInfo.college}
                     </p>
                   </div>
                   <Badge
@@ -51,7 +51,9 @@ export default function Education() {
                     {educationInfo.date}
                   </Badge>
                 </div>
-                <p>{educationInfo.desc}</p>
+                {educationInfo.desc && (
+                  <p className="text-muted-foreground">{educationInfo.desc}</p>
+                )}
                 {/* <ul className=" pl-5 space-y-2 text-muted-foreground">
                   <li></li>
                 </ul> */}
