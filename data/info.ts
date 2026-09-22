@@ -306,7 +306,36 @@ export const projectsInfo = [
     technologies: ["Next.js", "React", "Tailwind CSS", "Lucide", "GitHub", "Vercel"],
     image: "/images/portfolio-template/welcome.png",
   },
+  {
+    id: "ai-powered-qa-agent",
+    title: "AI-Powered QA Automation Agent",
+    description:
+      "A local-first QA automation agent that combines Playwright with Ollama to turn structured test intent into guided browser flows, deterministic assertions, and evidence-rich reports.",
+    technologies: [
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "Playwright",
+      "Ollama",
+      "Zod",
+      "GitHub Actions",
+    ],
+    image: "/images/AI-Power-Agent/main-agent.png",
+  },
 ];
+
+export type ProjectDetailInfo = {
+  title: string;
+  description: string;
+  technologies: string[];
+  images: string[];
+  challenges?: string;
+  outcomes?: string;
+  responsibilities?: string;
+  limitations?: string;
+  deployment?: string;
+  github?: string;
+};
 
 export const projectsDetails = {
   "jobby-finder": {
@@ -471,10 +500,50 @@ The collection demonstrates both manual and automated testing approaches, includ
     outcomes: "",
     deployment: "",
   },
-};
+  "ai-powered-qa-agent": {
+    title: "AI-Powered QA Automation Agent",
+    description: `AI-Powered QA Automation Agent is a local-first QA automation system that adds an intelligence and orchestration layer to Playwright. It keeps Playwright as the deterministic browser execution engine while using reusable Flow Profiles, structured planning, runtime data propagation, evidence capture, and optional visual validation to guide execution.
+
+The current pipeline normalizes Confluence-style test cases with a local instruction model, executes supported guided flows through application-specific UI profiles, produces structured action plans, captures screenshots for every step, and generates execution and final reports. A proven flow creates a repository, imports a Fruit Detection sample, verifies imported media, starts Object Detection training, validates settings and version changes, and verifies the generated model in the Models panel.
+
+The project uses Ollama-hosted models rather than paid cloud LLM APIs. Guided flows represented by existing profiles are stable; automatic profile matching and fully autonomous execution of arbitrary raw test cases remain on the roadmap.`,
+    technologies: [
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "Playwright",
+      "Ollama",
+      "qwen2.5:7b-instruct",
+      "qwen2.5-coder:7b",
+      "qwen3-vl:8b",
+      "Zod",
+      "GitHub Actions",
+      "JSON Schemas",
+    ],
+    images: ["/images/AI-Power-Agent/main-agent.png","/images/AI-Power-Agent/1 (3).png","/images/AI-Power-Agent/1 (2).png","/images/AI-Power-Agent/1 (1).png"],
+    responsibilities: `Designed and built the QA agent architecture and execution pipeline end to end.
+
+• Designed the local AI and Playwright orchestration architecture.
+• Built raw test-case normalization, reusable UI Flow Profiles, and constrained action planning.
+• Implemented the Playwright executor, functional validations, runtime-value propagation, and composite guided flows.
+• Added screenshot evidence, structured reports, local Ollama integrations, and optional vision analysis.
+• Added authentication-state handling, production-safety guards, environment-based configuration, and lightweight GitHub Actions validation.`,
+    outcomes: `• Normalizes Confluence-style QA test cases.
+• Runs reusable Flow Profiles and composite guided flows with Playwright.
+• Propagates runtime values across steps and records functional assertions and waits.
+• Produces structured plan, execution, vision, and final-report artifacts.
+• Supports optional local vision-model validation while keeping deterministic assertions authoritative.`,
+    limitations: `• Arbitrary raw test cases are not yet executed end to end automatically.
+• Normalization and guided execution are currently separate stages.
+• Automatic Flow Profile matching is not yet implemented.
+• Unknown workflows require a compatible profile or guided test case.
+• Flow Profiles and authentication setup are application-specific.`,
+    deployment: "",
+    github: "https://github.com/AhmadAl-Habal/AI-Powered-QA-Agent",
+  },
+} satisfies Record<string, ProjectDetailInfo>;
 
 export type ProjectId = keyof typeof projectsDetails;
-export type ProjectDetailInfo = (typeof projectsDetails)[ProjectId];
 
 export const projectIds = Object.keys(projectsDetails) as ProjectId[];
 

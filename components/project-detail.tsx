@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { ProjectDetailInfo, ProjectId } from "@/data/info";
@@ -40,6 +40,20 @@ export default function ProjectDetail({
             >
               <ExternalLink className="h-4 w-4" />
               View Live
+            </a>
+          </Button>
+        )}
+
+        {project.github && (
+          <Button variant="outline" asChild>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open the ${project.title} GitHub repository`}
+            >
+              <Github className="h-4 w-4" />
+              View on GitHub
             </a>
           </Button>
         )}
@@ -130,8 +144,19 @@ export default function ProjectDetail({
         </section>
       </div>
 
-      {(project.challenges || project.outcomes) && (
+      {(project.responsibilities || project.challenges || project.outcomes || project.limitations) && (
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+          {project.responsibilities && (
+            <section className="md:col-span-2">
+              <h2 className="mb-3 text-2xl font-bold">
+                Role &amp; Responsibilities
+              </h2>
+              <div className="whitespace-pre-line text-muted-foreground">
+                {project.responsibilities}
+              </div>
+            </section>
+          )}
+
           {project.challenges && (
             <section>
               <h2 className="mb-3 text-2xl font-bold">Challenges</h2>
@@ -143,9 +168,18 @@ export default function ProjectDetail({
 
           {project.outcomes && (
             <section>
-              <h2 className="mb-3 text-2xl font-bold">Outcomes</h2>
+              <h2 className="mb-3 text-2xl font-bold">Key Capabilities</h2>
               <div className="whitespace-pre-line text-muted-foreground">
                 {project.outcomes}
+              </div>
+            </section>
+          )}
+
+          {project.limitations && (
+            <section>
+              <h2 className="mb-3 text-2xl font-bold">Current Limitations</h2>
+              <div className="whitespace-pre-line text-muted-foreground">
+                {project.limitations}
               </div>
             </section>
           )}

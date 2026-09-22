@@ -22,7 +22,7 @@ export default function Experience() {
       <div className="relative">
         <div
           aria-hidden="true"
-          className="absolute left-0 h-full w-0.5 bg-primary/20 md:left-[13vw] md:-translate-x-1/2"
+          className="absolute inset-y-0 left-4 w-0.5 bg-primary/20 md:left-[12.5%] md:-translate-x-1/2"
         />
 
         <div className="space-y-12">
@@ -37,7 +37,7 @@ export default function Experience() {
             >
               <div
                 aria-hidden="true"
-                className="absolute left-0 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-[13vw]"
+                className="absolute left-4 top-8 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-background bg-primary md:left-[12.5%]"
               />
 
               <div className="pl-8 md:w-3/4 md:pl-12">
